@@ -25,7 +25,7 @@ set scrolljump=5                " scroll five lines at a time vertically
 set sidescroll=10               " minumum columns to scroll horizontally
 
 " Search
-set nohlsearch                  " don't persist search highlighting
+"set nohlsearch                 " don't persist search highlighting
 set incsearch                   " search with typeahead
 
 " Indent
@@ -48,10 +48,10 @@ set modelines=0                 " disable modelines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Splits navigation
-noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Line numbers
 set nu
@@ -61,3 +61,21 @@ set eol
 
 " Refresh
 set autoread
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quirky settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map -p oimport ipdb; ipdb.set_trace(context=21)<ESC>
+imap jj <esc>
+nnoremap ; : 
+set nocp
+set mouse =a
+" set number
+set hlsearch
+
+set background=light
+set cursorline
+
+let mapleader = ","
+nnoremap <leader>w <C-W>v<C-W>l

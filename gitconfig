@@ -1,3 +1,8 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
-  name = Ilija Radosavovic
-  email = ilija.radosavovic@gmail.com
+	name = JEFFREY ZHANG
+	email = jozhang@berkeley.edu

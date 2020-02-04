@@ -50,3 +50,7 @@ symlink_dot "bash_profile"
 symlink_dot "inputrc"
 symlink_dot "vimrc"
 symlink_dot "gitconfig"
+symlink_dot "tmux.conf"
+tmux source-file ~/.tmux.conf
+# TODO auto setup zsh with agnoster or cobalt2
+
