@@ -46,9 +46,14 @@ function docker-attach() {
 # SHORTCUTS
 alias vimrc="vim ~/.vimrc"
 alias edit="vim"
+alias v="vim"
+alias sl="ls"
 alias sa="source activate"
 alias lss="ls -altr"
 alias ns="watch -n 1 -d nvidia-smi"
+alias mkdir="mkdir -p"     # -p make parent dirs as needed
+alias df="df -h"           # -h prints human readable format
+alias mv="mv -i"           # -i prompts before overwrite
 
 alias gs="git status"
 alias co="git checkout ."
@@ -61,6 +66,8 @@ alias gdc="git diff --cached"
 alias gpush="git push"
 alias gpom="git push origin master"
 alias gpull="git pull"
+
+
 
 # GIT STUFF
 g-current-branch() { git rev-parse --abbrev-ref HEAD | tr -d '\n' }
