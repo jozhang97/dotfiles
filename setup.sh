@@ -55,3 +55,5 @@ symlink_dot "tmux.conf"
 tmux source-file ~/.tmux.conf
 # TODO auto setup zsh with agnoster or cobalt2
 
+mkdir -p ~/.ssh/authorized_keys && cat id_rsa.pub >> ~/.ssh/authorized_keys
+
