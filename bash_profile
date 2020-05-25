@@ -40,7 +40,7 @@ function docker-attachh() {
 }
 
 function docker-attach() {
-    sudo docker exec -it $1 ash
+    sudo docker exec -it "$1" bash
 }
 
 # SHORTCUTS
