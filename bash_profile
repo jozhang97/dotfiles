@@ -6,7 +6,7 @@ fi
 
 # MOVING DIRECTORIES STUFF
 jump-to-project-folder() {
-  cd $HOME/code/$1
+  cd "$HOME/code/$1"
 }
 alias pj=jump-to-project-folder
 
@@ -24,7 +24,7 @@ function jlab() {
 
 function tb() {
     PORT=${1:-6006}
-    tensorboard --logdir=. --port=${PORT} --host={$hostname}.eecs.berkeley.edu
+    tensorboard --logdir=. --port=${PORT} --host=${hostname}.eecs.berkeley.edu
 }
 
 function sync() {
