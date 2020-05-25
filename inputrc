@@ -6,3 +6,11 @@ set editing-mode vi
 "\C-a.":beginning-of-line
 "\C-e.":end-of-line
 "\C-l":clear-screen
+
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+"\ex": 'cd !$ \015ls\015'   # jump to target folder of last comman
+"\ez": 'cd -\015'           # undo last cd
+
