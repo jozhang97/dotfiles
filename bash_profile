@@ -44,6 +44,7 @@ function docker-attach() {
 }
 
 # SHORTCUTS
+alias whichshell="echo $0"
 alias vimrc="vim ~/.vimrc"
 alias edit="vim"
 alias v="vim"

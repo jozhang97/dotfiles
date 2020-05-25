@@ -1,2 +1,8 @@
 # Vi bindings
 set editing-mode vi
+
+"\C-p":previous-history
+"\C-n":next-history
+"\C-a.":beginning-of-line
+"\C-e.":end-of-line
+"\C-l":clear-screen
