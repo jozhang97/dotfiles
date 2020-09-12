@@ -1,7 +1,7 @@
 # Source bashrc
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
+# if [ -f ~/.bashrc ]; then
+#    source ~/.bashrc
+# fi
 
 
 # MOVING DIRECTORIES STUFF
@@ -44,17 +44,26 @@ function docker-attach() {
 }
 
 # SHORTCUTS
+alias find='find . -name'
+alias subll='subl $_'
+alias howbig='du -sh'
+alias pythonn="python gshield.py && python"
 alias whichshell="echo $0"
+alias hex='xxd -psd'
 alias vimrc="vim ~/.vimrc"
 alias edit="vim"
 alias v="vim"
 alias sl="ls"
+alias dc="cd"
 alias sa="source activate"
 alias lss="ls -altr"
 alias ns="watch -n 1 -d nvidia-smi"
 alias mkdir="mkdir -p"     # -p make parent dirs as needed
 alias df="df -h"           # -h prints human readable format
 alias mv="mv -i"           # -i prompts before overwrite
+alias cp="cp -i"           # -i prompts before overwrite
+alias my-ip="curl ipinfo.io/ip 2> /dev/null"
+alias time='watch -n 0.1 "date +"%H:%M%S"  | toilet -f bigmono9"'
 
 alias gs="git status"
 alias co="git checkout ."
