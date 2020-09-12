@@ -53,13 +53,26 @@ symlink_dot "vimrc"
 symlink_dot "gitconfig"
 symlink_dot "tmux.conf"
 tmux source-file ~/.tmux.conf
-# TODO auto setup zsh with agnoster or cobalt2
 
 touch ~/.ssh/authorized_keys && cat id_rsa.pub >> ~/.ssh/authorized_keys
 
+# zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # assume zsh
 ln -s cobalt2.zsh-theme ~/.oh-my-zsh/themes/
 sed -i 's/robbyrussell/cobalt2/g' ~/.zshrc
-echo -e "source bash_profile" >> ~/.zshrc
+echo -e "source .bash_profile" >> ~/.zshrc
 
+# python scripts
 pip install -r requirements.txt
+
+# antigen
+curl -L git.io/antigen > antigen.zsh
+echo -e "source $(pwd)/antigen.zsh" >> ~/.zshrc
+echo -e "antigen bundle zsh-users/zsh-autosuggestions" >> ~/.zshrc
+echo -e "antigen bundle zsh-users/zsh-completions" >> ~/.zshrc
+echo -e "antigen bundle zsh-users/zsh-syntax-highlighting" >> ~/.zshrc
+echo -e "antigen apply" >> ~/.zshrc
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
