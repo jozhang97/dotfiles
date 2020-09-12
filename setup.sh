@@ -63,6 +63,7 @@ sed -i 's/robbyrussell/cobalt2/g' ~/.zshrc
 echo -e "source .bash_profile" >> ~/.zshrc
 
 # python scripts
+pip install --upgrade pip
 pip install -r requirements.txt
 
 # antigen
