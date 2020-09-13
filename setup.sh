@@ -57,6 +57,7 @@ tmux source-file ~/.tmux.conf
 touch ~/.ssh/authorized_keys && cat id_rsa.pub >> ~/.ssh/authorized_keys
 
 # zsh
+apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # assume zsh
 ln -s cobalt2.zsh-theme ~/.oh-my-zsh/themes/
 sed -i 's/robbyrussell/cobalt2/g' ~/.zshrc
