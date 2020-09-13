@@ -10,10 +10,8 @@ hydra-submitit-launcher
 slurm_gpustat
 torchvision
 torchsummary
-scikit-fmm
 scikit-image
 gym
-psutil
 pytest
 jupyterlab
 ipykernel
