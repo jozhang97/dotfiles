@@ -116,3 +116,4 @@ set smartcase
 
 
 " Fancy vimrc: https://github.com/spf13/spf13-vim
+set pastetoggle=<F2>
