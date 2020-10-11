@@ -3,6 +3,11 @@
 #    source ~/.bashrc
 # fi
 
+function sbatchall() {
+    for name in /u/jozhang/code/motion3d/scripts/runs/submit*.sh; do
+      sbatch ${name}
+    done
+}
 
 # MOVING DIRECTORIES STUFF
 alias sme='squeue -u $(whoami)'
