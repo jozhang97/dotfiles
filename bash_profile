@@ -5,6 +5,7 @@
 
 
 # MOVING DIRECTORIES STUFF
+alias sme='squeue -u $(whoami)'
 alias home='cd "$HOME/code/motion3d"'
 jump-to-project-folder() {
   cd "$HOME/code/$1"
