@@ -10,7 +10,11 @@ function sbatchall() {
 }
 
 # MOVING DIRECTORIES STUFF
+alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
 alias sme='squeue -u $(whoami)'
+alias watchme='watch -n 1 -d squeue -u $(whoami)'
+alias watchlog='watch -n 1 -d cat /path/to/wandb/latest-run/files/output.log'
+
 alias home='cd "$HOME/code/motion3d"'
 jump-to-project-folder() {
   cd "$HOME/code/$1"
