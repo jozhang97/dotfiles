@@ -4,8 +4,8 @@
 # fi
 
 function sbatchall() {
-    for name in /u/jozhang/code/motion3d/scripts/runs/submit*.sh; do
-      sbatch ${name}
+    for name in $(pwd)/submit*.sh; do
+        sbatch ${name}
     done
 }
 
