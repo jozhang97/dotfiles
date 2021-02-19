@@ -87,6 +87,7 @@ alias gdc="git diff --cached"
 alias gpush="git push"
 alias gpom="git push origin master"
 alias gpull="git pull"
+alias gl="git log"
 
 
 
