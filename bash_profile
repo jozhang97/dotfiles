@@ -4,10 +4,23 @@
 # fi
 
 function sbatchall() {
+    for name in /u/jozhang/code/motion3d/scripts/runs/submit*.sh; do
+        sbatch ${name}
+    done
+}
+
+function sba() {
     for name in $(pwd)/submit*.sh; do
         sbatch ${name}
     done
 }
+
+function cba() {
+    for name in $(pwd)/*.submit; do
+        condor_submit ${name}
+    done
+}
+
 
 # MOVING DIRECTORIES STUFF
 alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
@@ -26,7 +39,7 @@ alias please='eval "sudo $(fc -ln -1)"'
 
 # CONNECT WITH REMOTE SERVER
 function imageme() {
-    curl https://cdn.rawgit.com/unwitting/imageme/master/imageme.py | sudo python2
+    curl https://cdn.rawgit.com/unwitting/imageme/master/imageme.py | python2
 }
 
 function jlab() {
