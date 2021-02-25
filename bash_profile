@@ -25,7 +25,7 @@ function cba() {
 # MOVING DIRECTORIES STUFF
 alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
 alias sme='squeue -u $(whoami)'
-alias watchme='watch -n 1 -d squeue -u $(whoami) -o \"%.18i %64j  %.2t %.10M %R\"'
+alias watchme='watch -n 1 -d "squeue -u $(whoami) | wc -l && squeue -u $(whoami) -o \"%.18i %64j  %.2t %.10M %R\""'
 alias watchlog='watch -n 1 -d cat /path/to/wandb/latest-run/files/output.log'
 
 alias home='cd "$HOME/code/motion3d"'
