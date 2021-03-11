@@ -21,8 +21,8 @@ function cba() {
     done
 }
 
-alias sqlong='squeue -u $(whoami) -o \"%.18i %64j  %.2t %.10M %R\""'
-alias srunj='srun --jobid=$1 --pty /bin/bash'
+alias sqlong='squeue -u $(whoami) -o "%.18i %64j  %.2t %.10M %R"'
+function srunj() { srun --jobid=$1 --pty /bin/zsh' }   # remember to unalias srunj
 
 # MOVING DIRECTORIES STUFF
 alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
