@@ -24,6 +24,7 @@ export PATH="/opt/cuda-10.0/bin:$PATH"
 export CUDA_PATH=/opt/cuda-10.0
 export CUDA_HOME=/opt/cuda-10.0
 export LD_LIBRARY_PATH=/opt/cuda-10.0/lib64:$LD_LIBRARY_PATH
+export HF_HOME='/huggingface'
 
 
 # Fuzzy Autocomplete

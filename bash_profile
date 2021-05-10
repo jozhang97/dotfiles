@@ -21,8 +21,9 @@ function cba() {
     done
 }
 
+alias killpy="ps --user $(id -u) | grep 'python' | awk '{print $1}' | xargs -r kill -9"
 alias sqlong='squeue -u $(whoami) -o "%.18i %64j  %.2t %.10M %R"'
-function srunj() { srun --jobid=$1 --pty /bin/zsh' }   # remember to unalias srunj
+function srunj() { srun --jobid=$1 --pty /bin/zsh }   # remember to unalias srunj
 
 # MOVING DIRECTORIES STUFF
 alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
