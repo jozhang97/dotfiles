@@ -44,7 +44,7 @@ alias please='eval "sudo $(fc -ln -1)"'
 
 # CONNECT WITH REMOTE SERVER
 function imageme() {
-    curl https://cdn.rawgit.com/unwitting/imageme/master/imageme.py | python2
+    curl https://cdn.jsdelivr.net/gh/unwitting/imageme@master/imageme.py | python2
 }
 
 function jlab() {
