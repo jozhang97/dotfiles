@@ -63,6 +63,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ln -s cobalt2.zsh-theme ~/.oh-my-zsh/themes/
 sed -i 's/robbyrussell/cobalt2/g' ~/.zshrc
 echo -e "source ~/.bash_profile" >> ~/.zshrc
+echo 'Install cobalt2 manually https://github.com/wesbos/Cobalt2-iterm'
 
 # python scripts
 pip install --upgrade pip
