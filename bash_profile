@@ -31,6 +31,8 @@ alias sme='squeue -u $(whoami)'
 alias watchme='watch -n 1 -d "squeue -u $(whoami) | wc -l && squeue -u $(whoami) -o \"%.18i %64j  %.2t %.10M %R\""'
 alias watchlog='watch -n 1 -d cat /path/to/wandb/latest-run/files/output.log'
 
+alias va='cd $HOME/code/VideoAppearance'
+alias cs='cd $HOME/code/ContrastiveSeg'
 alias ct='cd $HOME/code/CenterNet2/projects/CenterNet2'
 alias ow='cd $HOME/code/OWT-dev/projects/CenterNet2'
 alias home='cd "$HOME/code/motion3d"'
