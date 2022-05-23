@@ -53,6 +53,9 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+noremap <C-j> 5j
+noremap <C-k> 5k
+
 " Line numbers
 set nu
 
