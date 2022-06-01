@@ -66,15 +66,15 @@ echo -e "source ~/.bash_profile" >> ~/.zshrc
 echo 'Install cobalt2 manually https://github.com/wesbos/Cobalt2-iterm'
 
 # python scripts
-pip install --upgrade pip
-pip install -r requirements.txt
+# pip install --upgrade pip
+# pip install -r requirements.txt
 
 # antigen
 curl -L git.io/antigen > antigen.zsh
 echo -e "source $(pwd)/antigen.zsh" >> ~/.zshrc
-echo -e "antigen bundle zsh-users/zsh-autosuggestions" >> ~/.zshrc
 echo -e "antigen bundle zsh-users/zsh-completions" >> ~/.zshrc
 echo -e "antigen bundle zsh-users/zsh-syntax-highlighting" >> ~/.zshrc
+echo -e "antigen bundle zsh-users/zsh-autosuggestions" >> ~/.zshrc
 echo -e "antigen apply" >> ~/.zshrc
 
 # fzf
