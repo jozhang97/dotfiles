@@ -80,3 +80,10 @@ echo -e "antigen apply" >> ~/.zshrc
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+echo "Download Cursor"
+echo "Download Alfred"
+echo "Download Rectangle"
+echo "Download Snipaste"
+echo "Reverse Trackpad"
+echo "Change modifier keys"
