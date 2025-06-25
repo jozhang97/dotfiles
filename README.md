@@ -10,6 +10,19 @@ Set up symlinks:
 ./setup.sh
 ```
 
+## Things to install on MacBook
+
+- Cursor
+- Alfred
+- Snipaste
+- Rectangle
+
+## Settings to modify on MacBook
+
+- Reverse trackpad scrolling
+- Hot corners
+- Modifier keys
+
 ## Sources
 
 Dotfiles are derived from:
