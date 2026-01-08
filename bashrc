@@ -45,3 +45,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PYTHONPATH="/home1/07861/jozhang/code/ambient_proteins/genie2:/home1/07861/jozhang/code/ambient_proteins/insilico_design_pipeline"
+export PATH="/scratch/projects/cgai/ambient_proteins/libs/bin:/home1/07861/jozhang/code/ambient_proteins:$PATH"
+. "$HOME/.cargo/env"
+
+alias gdrive=$SCRATCH/code/Infinity_dev/third_party/gdrive/target/debug/gdrive
+export PATH="$HOME/.local/bin:$PATH"

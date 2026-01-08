@@ -21,18 +21,24 @@ function cba() {
     done
 }
 
+alias sinfo="sinfo -S+P -o '%18P %8a %20F' -a"
+alias tunnel="$SCRATCH/software/code tunnel"
+alias tunnelc="$SCRATCH/software/cursor tunnel"
 alias killpy="ps --user $(id -u) | grep 'python' | awk '{print $1}' | xargs -r kill -9"
 alias sqlong='squeue -u $(whoami) -o "%.18i %64j  %.2t %.10M %R"'
 function srunj() { srun --jobid=$1 --pty /bin/zsh }   # remember to unalias srunj
 
 # MOVING DIRECTORIES STUFF
+alias squeueme='squeue --format="%.18i %.9P %.2t %.10M %.6D" -u $(whoami) -a'
 alias tt='tmux a -d'
 alias profile='python -m cProfile -o $(pwd)/cprofile.prof $1'
 alias sme='squeue -u $(whoami)'
 alias watchme='watch -n 1 -d "squeue -u $(whoami) | wc -l && squeue -u $(whoami) -o \"%.18i %64j  %.2t %.10M %R\""'
 alias watchlog='watch -n 1 -d cat /path/to/wandb/latest-run/files/output.log'
 
+alias cgai='cd /scratch/projects/cgai'
 alias cc='cd $HOME/code/jeffrey-internship'
+alias inv='cd $HOME/code/InverseFold'
 alias va='cd $HOME/code/VideoAppearance'
 alias cs='cd $HOME/code/ContrastiveSeg'
 alias ct='cd $HOME/code/CenterNet2/projects/CenterNet2'
@@ -45,27 +51,6 @@ alias pj=jump-to-project-folder
 
 # SUDO INSERTION
 alias please='eval "sudo $(fc -ln -1)"'
-
-# CONNECT WITH REMOTE SERVER
-function imageme() {
-    curl https://cdn.jsdelivr.net/gh/unwitting/imageme@master/imageme.py | python2
-}
-
-function jlab() {
-    jupyter lab --ip louis.eecs.berkeley.edu --port 8889 --allow-root
-}
-
-function tb() {
-    PORT=${1:-6006}
-    tensorboard --logdir=. --port=${PORT} --host=${hostname}.eecs.berkeley.edu
-}
-
-function sync() {
-    remote=$1
-    dir=$2
-    # Sends code/data from local to remote instance (up to the cloud)
-    rsync -avx -e 'ssh ' * jeffrey@${remote}.eecs.berkeley.edu:~/$2/.
-}
 
 # DOCKER SHORTCUTS
 function docker-attachh() {
@@ -112,11 +97,10 @@ alias gpull="git pull"
 alias gl="git log"
 alias ggrep="git grep"
 
+alias tf="tail -f"
 
 
 # GIT STUFF
-g-current-branch() { git rev-parse --abbrev-ref HEAD | tr -d '\n' }
-git-recent-branches() { git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)" }
 git-checkout-menu() {
   local -a BRANCHES
   local -a COLORED_BRANCHES
@@ -143,32 +127,5 @@ git-checkout-menu() {
     break
   done
 }
-# see changes of current working state with HEAD
-seePrevChanges() {
-  git diff HEAD^ $1
-}
-# show all the changes from current branch to master
-seeChangesFromMaster() {
-    branchName=$(getBranchName)
-    if [ "$#" -eq 1 ]; then
-      baseBranch=$1
-    else
-      baseBranch="master"
-    fi
-    git diff $branchName..$baseBranch
-}
-# show which files have been changed from current branch to master
-seeFileChangesFromMaster() {
-    branchName=$(getBranchName)
-    if [ "$#" -eq 1 ]; then
-      baseBranch=$1
-    else
-      baseBranch="master"
-    fi
-    git diff --name-status $branchName..$baseBranch
-}
 alias gcom=git-checkout-menu
-
-alias git-changes-master=seeChangesFromMaster
-alias git-changes-master-files=seeFileChangesFromMaster
-alias git-changes-file=seePrevChanges # see changes for a single file
+# . "$HOME/.cargo/env"
