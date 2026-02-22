@@ -60,10 +60,12 @@ touch ~/.ssh/authorized_keys && cat id_rsa.pub >> ~/.ssh/authorized_keys
 # zsh
 apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # assume zsh
-ln -s cobalt2.zsh-theme ~/.oh-my-zsh/themes/
+ln -s $(pwd)/cobalt2.zsh-theme ~/.oh-my-zsh/themes/
 sed -i 's/robbyrussell/cobalt2/g' ~/.zshrc
 echo -e "source ~/.bash_profile" >> ~/.zshrc
 echo 'Install cobalt2 manually https://github.com/wesbos/Cobalt2-iterm'
+echo '^ is no longer needed'
+echo 'turn on iTerm2 > Settings > Profiles > Text > Use built-in Powerline glyphs'
 
 # python scripts
 # pip install --upgrade pip
