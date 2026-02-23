@@ -85,7 +85,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 echo "Download Cursor"
 echo "Download Alfred"
-echo "Alfred -> Features -> Web Search
+echo "Alfred -> Features -> Web Search"
 echo "    gs https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q={query}&btnG="
 echo "    pdb https://www.rcsb.org/structure/{query}"
 echo "Download Rectangle"
