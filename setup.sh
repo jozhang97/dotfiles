@@ -87,6 +87,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 
+# claude
+curl -fsSL https://claude.ai/install.sh | zsh
+
+curl -Lk https://code.visualstudio.com/sha/download\?build\=stable\&os\=cli-alpine-x64 --output vscode.tar.gz
+tar -xzf vscode.tar.gz
+
 echo "Download Cursor"
 echo "Download Alfred"
 echo "Alfred -> Features -> Web Search"
