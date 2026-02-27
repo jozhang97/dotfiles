@@ -83,6 +83,10 @@ echo -e "antigen apply" >> ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# conda
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+
 echo "Download Cursor"
 echo "Download Alfred"
 echo "Alfred -> Features -> Web Search"
